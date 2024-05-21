@@ -51,6 +51,7 @@
 		74B066172AA949C600B7F5B7 /* cgolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cgolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B0661B2AA949C600B7F5B7 /* cgolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cgolUITests.swift; sourceTree = "<group>"; };
 		74B0661D2AA949C600B7F5B7 /* cgolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cgolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74B0662A2AA9568F00B7F5B7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 				74B066012AA949C400B7F5B7 /* Main.storyboard */,
 				74B066042AA949C500B7F5B7 /* Assets.xcassets */,
 				74B066062AA949C500B7F5B7 /* LaunchScreen.storyboard */,
+				74B0662A2AA9568F00B7F5B7 /* README.md */,
 			);
 			path = cgol;
 			sourceTree = "<group>";
@@ -441,6 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KAFB77MNB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -470,6 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KAFB77MNB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
