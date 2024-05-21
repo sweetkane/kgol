@@ -36,7 +36,7 @@ class Renderer: NSObject, MTKViewDelegate {
     var vertexBuffer: MTLBuffer!
 
     var timer: Timer!
-    var needsUpdateColors = false
+    var needsUpdate = false
 
     struct Vertex {
         var position: SIMD4<Float>
@@ -155,33 +155,7 @@ class Renderer: NSObject, MTKViewDelegate {
         /// Respond to drawable size or orientation changes here
     }
 
-    func createGrid() {
-        initBoard()
-        let squareHeight: Float = 2 / Float(gridHeight)
-        let squareWidth: Float = 2 / Float(gridWidth)
-        vertices = []
 
-        for i in 0..<gridWidth {
-            for j in 0..<gridHeight {
-                let x = Float(i) * squareWidth - 1
-                let y = Float(j) * squareHeight - 1
-
-                let color = randomColor()
-
-                let topLeft = Vertex(position: SIMD4<Float>(x, y + squareHeight, 0, 1), color: color)
-                let bottomLeft = Vertex(position: SIMD4<Float>(x, y, 0, 1), color: color)
-                let topRight = Vertex(position: SIMD4<Float>(x + squareWidth, y + squareHeight, 0, 1), color: color)
-                let bottomRight = Vertex(position: SIMD4<Float>(x + squareWidth, y, 0, 1), color: color)
-
-                vertices += [topLeft, bottomLeft, topRight]
-                vertices += [bottomLeft, bottomRight, topRight]
-            }
-        }
-
-        vertexBuffer = device.makeBuffer(bytes: vertices,
-                                         length: vertices.count * MemoryLayout<Vertex>.stride,
-                                         options: [])
-    }
 
     func randomColor() -> SIMD4<Float> {
         return SIMD4<Float>(Float.random(in: 0...1),
@@ -193,7 +167,7 @@ class Renderer: NSObject, MTKViewDelegate {
     func startColorUpdateTimer() {
         // Update colors every second (or adjust the interval as needed)
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
-            self?.needsUpdateColors = true
+            self?.needsUpdate = true
         }
     }
 
@@ -212,16 +186,44 @@ class Renderer: NSObject, MTKViewDelegate {
         commandBuffer.present(drawable)
         commandBuffer.commit()
 
-        if needsUpdateColors || true {
+        if needsUpdate {
             updateBoard()
             renderBoard()
-            needsUpdateColors = false
+            needsUpdate = false
         }
     }
 
+    func createGrid() {
+        initBoard()
+        let squareHeight: Float = 2 / Float(gridHeight)
+        let squareWidth: Float = 2 / Float(gridWidth)
+        vertices = []
+
+        for i in 0..<gridWidth {
+            for j in 0..<gridHeight {
+                let x = Float(i) * squareWidth - 1
+                let y = Float(j) * squareHeight - 1
+
+                let color = board[i][j] ? randomColor() : deadColor
+
+                let topLeft = Vertex(position: SIMD4<Float>(x, y + squareHeight, 0, 1), color: color)
+                let bottomLeft = Vertex(position: SIMD4<Float>(x, y, 0, 1), color: color)
+                let topRight = Vertex(position: SIMD4<Float>(x + squareWidth, y + squareHeight, 0, 1), color: color)
+                let bottomRight = Vertex(position: SIMD4<Float>(x + squareWidth, y, 0, 1), color: color)
+
+                vertices += [topLeft, bottomLeft, topRight]
+                vertices += [bottomLeft, bottomRight, topRight]
+            }
+        }
+
+        vertexBuffer = device.makeBuffer(bytes: vertices,
+                                         length: vertices.count * MemoryLayout<Vertex>.stride,
+                                         options: [])
+    }
+
     // CGOl logic
-    let gridWidth = 50
-    let gridHeight = 50
+    let gridWidth  = 40
+    let gridHeight = 40
     var board: [[Bool]] = []
 
     func initBoard() {
@@ -271,7 +273,7 @@ class Renderer: NSObject, MTKViewDelegate {
             if (i % 6 == 0) {
                 let row = (i / 6) % gridHeight
                 let col = (i / 6) / gridHeight
-                color = board[row][col] ? aliveColor : deadColor
+                color = board[row][col] ? randomColor() : deadColor
             }
             vertices[i].color = color
         }
@@ -291,7 +293,7 @@ class Renderer: NSObject, MTKViewDelegate {
 infix operator %%
 
 extension Int {
-    static  func %% (_ left: Int, _ right: Int) -> Int {
+    static func %% (_ left: Int, _ right: Int) -> Int {
         if left >= 0 { return left % right }
         if left >= -right { return (left+right) }
         return ((left % right)+right)%right
