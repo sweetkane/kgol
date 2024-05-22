@@ -28,9 +28,10 @@ class GameViewController: UIViewController {
 
     func setupMtkView() {
 
-        let mtkView = MTKView(frame: view.bounds)
-        view.addSubview(mtkView)
-
+        guard let mtkView = view as? MTKView else {
+            print("View of Gameview controller is not an MTKView")
+            return
+        }
         // Select the device to render with.  We choose the default device
         guard let defaultDevice = MTLCreateSystemDefaultDevice() else {
             print("Metal is not supported")
@@ -43,14 +44,7 @@ class GameViewController: UIViewController {
         // Add the MTKView to the view hierarchy
         // view.addSubview(mtkView)
 
-        // Ensure the MTKView fills the entire screen
-        // mtkView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            mtkView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mtkView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mtkView.topAnchor.constraint(equalTo: view.topAnchor),
-            mtkView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+
 
         guard let newRenderer = Renderer(metalKitView: mtkView) else {
             print("Renderer cannot be initialized")
