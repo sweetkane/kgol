@@ -260,10 +260,12 @@ class Renderer: NSObject, MTKViewDelegate {
         }.count
 
         if board[row][col] {
-            return 2 <= numLivingNbrs && numLivingNbrs <= 3
+            return 4 <= numLivingNbrs && numLivingNbrs <= 5
         }
         else {
-            return numLivingNbrs == 3
+            return numLivingNbrs == 2 || (
+                numLivingNbrs == 0 && Int.random(in: 0...1000) == 0
+            )
         }
     }
 
