@@ -38,12 +38,15 @@ class Renderer: NSObject, MTKViewDelegate {
     var timer: Timer!
     var needsUpdate = false
 
+    let shared: SharedData
+
     struct Vertex {
         var position: SIMD4<Float>
         var color: SIMD4<Float>
     }
     
-    init?(metalKitView: MTKView) {
+    init?(metalKitView: MTKView, shared: SharedData) {
+        self.shared = shared
         self.device = metalKitView.device!
         guard let queue = self.device.makeCommandQueue() else { return nil }
         self.commandQueue = queue
@@ -166,7 +169,7 @@ class Renderer: NSObject, MTKViewDelegate {
 
     func startColorUpdateTimer() {
         // Update colors every second (or adjust the interval as needed)
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { [weak self] _ in
             self?.needsUpdate = true
         }
     }
@@ -249,23 +252,22 @@ class Renderer: NSObject, MTKViewDelegate {
     }
 
     let nbrs = [[-1,-1],[-1,0],[-1,1],
-               [0,-1],         [0,1],
-               [1,-1],  [1,0], [1,1]]
+                [0,-1],        [0,1],
+                [1,-1], [1,0], [1,1]]
 
     func updateCell(row: Int, col: Int) -> Bool {
         let numLivingNbrs = nbrs.compactMap { nbr in
             let nbrRow = (row+nbr[0]) %% gridHeight
             let nbrCol = (col+nbr[1]) %% gridWidth
-            return board[nbrRow][nbrCol] ? 1 : nil
+            return board[nbrRow][nbrCol] ? true : nil
         }.count
 
         if board[row][col] {
-            return 4 <= numLivingNbrs && numLivingNbrs <= 5
+            return shared.alpha <= numLivingNbrs && numLivingNbrs <= shared.beta
         }
         else {
-            return numLivingNbrs == 2 || (
-                numLivingNbrs == 0 && Int.random(in: 0...1000) == 0
-            )
+            return numLivingNbrs == shared.gamma
+            || (numLivingNbrs == 0 && Int.random(in: 0...1000) == 0)
         }
     }
 

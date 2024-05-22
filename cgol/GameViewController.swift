@@ -21,12 +21,13 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMtkView()
-        setupMenuView()
+        let sharedData = SharedData()
+        setupMtkView(sharedData: sharedData)
+        setupMenuView(sharedData: sharedData)
 
     }
 
-    func setupMtkView() {
+    func setupMtkView(sharedData: SharedData) {
 
         guard let mtkView = view as? MTKView else {
             print("View of Gameview controller is not an MTKView")
@@ -46,7 +47,7 @@ class GameViewController: UIViewController {
 
 
 
-        guard let newRenderer = Renderer(metalKitView: mtkView) else {
+        guard let newRenderer = Renderer(metalKitView: mtkView, shared: sharedData) else {
             print("Renderer cannot be initialized")
             return
         }
@@ -58,9 +59,9 @@ class GameViewController: UIViewController {
         mtkView.delegate = renderer
     }
 
-    func setupMenuView() {
+    func setupMenuView(sharedData: SharedData) {
         // Add the SwiftUI view
-        let swiftUIView = ContentView()
+        let swiftUIView = ContentView(sharedData: sharedData)
         let hostingController = UIHostingController(rootView: swiftUIView)
         addChild(hostingController)
         view.addSubview(hostingController.view)

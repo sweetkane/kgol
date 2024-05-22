@@ -14,8 +14,8 @@
             filePath = "cgol/Renderer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "draw(in:)"
             landmarkType = "7">
          </BreakpointContent>
