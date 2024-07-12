@@ -1,5 +1,5 @@
 # kgol - Kane's Game Of Life
-An interactive version of [Conway's Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) developed for Apple devices
+An interactive play on [Conway's Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) developed for Apple devices
 
 ## Rules
 Conway's Game Of Life is based on a couple simple rules:
