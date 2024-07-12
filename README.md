@@ -1,5 +1,5 @@
 # kgol - Kane's Game Of Life
-An interactive version of Conway's Game Of Life optimized to run on Apple shaders
+An interactive version of [Conway's Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) developed for Apple devices
 
 ## Rules
 Conway's Game Of Life is based on a couple simple rules:
@@ -9,7 +9,7 @@ Conway's Game Of Life is based on a couple simple rules:
 In Kane's game of life, we keep these rules, but we replace the numbers with variables
 - If a cell is alive, and it has less than `alpha` or more than `beta` living neighbors, it dies
 - If a cell is dead, and it has exactly `chi` living neighbors, it comes to life
-- The user can adjust `alpha`, `beta`, and `chi` in real time to generate cool patterns!
+- The user can adjust `alpha`, `beta`, and `chi` in real time to generate cool emergent patterns!
 
 ## Gallery
 ![ezgif-5-03c1abffae](https://github.com/user-attachments/assets/cb146ba7-894f-4cc0-a871-88ac6b421873)
