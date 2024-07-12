@@ -1,6 +1,6 @@
 //
 //  SharedData.swift
-//  cgol
+//  kgol
 //
 //  Created by Kane Sweet on 5/22/24.
 //

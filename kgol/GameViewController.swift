@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  cgol
+//  kgol
 //
 //  Created by Kane Sweet on 9/6/23.
 //

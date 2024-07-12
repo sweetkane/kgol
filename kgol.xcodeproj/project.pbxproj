@@ -16,9 +16,9 @@
 		74B066032AA949C400B7F5B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B066012AA949C400B7F5B7 /* Main.storyboard */; };
 		74B066052AA949C500B7F5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74B066042AA949C500B7F5B7 /* Assets.xcassets */; };
 		74B066082AA949C500B7F5B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B066062AA949C500B7F5B7 /* LaunchScreen.storyboard */; };
-		74B066122AA949C500B7F5B7 /* cgolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B066112AA949C500B7F5B7 /* cgolTests.swift */; };
-		74B0661C2AA949C600B7F5B7 /* cgolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0661B2AA949C600B7F5B7 /* cgolUITests.swift */; };
-		74B0661E2AA949C600B7F5B7 /* cgolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0661D2AA949C600B7F5B7 /* cgolUITestsLaunchTests.swift */; };
+		74B066122AA949C500B7F5B7 /* kgolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B066112AA949C500B7F5B7 /* kgolTests.swift */; };
+		74B0661C2AA949C600B7F5B7 /* kgolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0661B2AA949C600B7F5B7 /* kgolUITests.swift */; };
+		74B0661E2AA949C600B7F5B7 /* kgolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0661D2AA949C600B7F5B7 /* kgolUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		74A644DC2BFD88CC00792BFD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		74A644DE2BFE3DAE00792BFD /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
-		74B065F52AA949C400B7F5B7 /* cgol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cgol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B065F52AA949C400B7F5B7 /* kgol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kgol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B065F82AA949C400B7F5B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B065FA2AA949C400B7F5B7 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 		74B065FB2AA949C400B7F5B7 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
@@ -50,11 +50,11 @@
 		74B066022AA949C400B7F5B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74B066042AA949C500B7F5B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74B066072AA949C500B7F5B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		74B0660D2AA949C500B7F5B7 /* cgolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cgolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74B066112AA949C500B7F5B7 /* cgolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cgolTests.swift; sourceTree = "<group>"; };
-		74B066172AA949C600B7F5B7 /* cgolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cgolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74B0661B2AA949C600B7F5B7 /* cgolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cgolUITests.swift; sourceTree = "<group>"; };
-		74B0661D2AA949C600B7F5B7 /* cgolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cgolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74B0660D2AA949C500B7F5B7 /* kgolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kgolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B066112AA949C500B7F5B7 /* kgolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kgolTests.swift; sourceTree = "<group>"; };
+		74B066172AA949C600B7F5B7 /* kgolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kgolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B0661B2AA949C600B7F5B7 /* kgolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kgolUITests.swift; sourceTree = "<group>"; };
+		74B0661D2AA949C600B7F5B7 /* kgolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kgolUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		74B0662A2AA9568F00B7F5B7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,9 +86,9 @@
 		74B065EC2AA949C400B7F5B7 = {
 			isa = PBXGroup;
 			children = (
-				74B065F72AA949C400B7F5B7 /* cgol */,
-				74B066102AA949C500B7F5B7 /* cgolTests */,
-				74B0661A2AA949C600B7F5B7 /* cgolUITests */,
+				74B065F72AA949C400B7F5B7 /* kgol */,
+				74B066102AA949C500B7F5B7 /* kgolTests */,
+				74B0661A2AA949C600B7F5B7 /* kgolUITests */,
 				74B065F62AA949C400B7F5B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,14 +96,14 @@
 		74B065F62AA949C400B7F5B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74B065F52AA949C400B7F5B7 /* cgol.app */,
-				74B0660D2AA949C500B7F5B7 /* cgolTests.xctest */,
-				74B066172AA949C600B7F5B7 /* cgolUITests.xctest */,
+				74B065F52AA949C400B7F5B7 /* kgol.app */,
+				74B0660D2AA949C500B7F5B7 /* kgolTests.xctest */,
+				74B066172AA949C600B7F5B7 /* kgolUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74B065F72AA949C400B7F5B7 /* cgol */ = {
+		74B065F72AA949C400B7F5B7 /* kgol */ = {
 			isa = PBXGroup;
 			children = (
 				74B065F82AA949C400B7F5B7 /* AppDelegate.swift */,
@@ -118,32 +118,32 @@
 				74A644DC2BFD88CC00792BFD /* Menu.swift */,
 				74A644DE2BFE3DAE00792BFD /* SharedData.swift */,
 			);
-			path = cgol;
+			path = kgol;
 			sourceTree = "<group>";
 		};
-		74B066102AA949C500B7F5B7 /* cgolTests */ = {
+		74B066102AA949C500B7F5B7 /* kgolTests */ = {
 			isa = PBXGroup;
 			children = (
-				74B066112AA949C500B7F5B7 /* cgolTests.swift */,
+				74B066112AA949C500B7F5B7 /* kgolTests.swift */,
 			);
-			path = cgolTests;
+			path = kgolTests;
 			sourceTree = "<group>";
 		};
-		74B0661A2AA949C600B7F5B7 /* cgolUITests */ = {
+		74B0661A2AA949C600B7F5B7 /* kgolUITests */ = {
 			isa = PBXGroup;
 			children = (
-				74B0661B2AA949C600B7F5B7 /* cgolUITests.swift */,
-				74B0661D2AA949C600B7F5B7 /* cgolUITestsLaunchTests.swift */,
+				74B0661B2AA949C600B7F5B7 /* kgolUITests.swift */,
+				74B0661D2AA949C600B7F5B7 /* kgolUITestsLaunchTests.swift */,
 			);
-			path = cgolUITests;
+			path = kgolUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74B065F42AA949C400B7F5B7 /* cgol */ = {
+		74B065F42AA949C400B7F5B7 /* kgol */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74B066212AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "cgol" */;
+			buildConfigurationList = 74B066212AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "kgol" */;
 			buildPhases = (
 				74B065F12AA949C400B7F5B7 /* Sources */,
 				74B065F22AA949C400B7F5B7 /* Frameworks */,
@@ -153,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = cgol;
+			name = kgol;
 			productName = cgol;
-			productReference = 74B065F52AA949C400B7F5B7 /* cgol.app */;
+			productReference = 74B065F52AA949C400B7F5B7 /* kgol.app */;
 			productType = "com.apple.product-type.application";
 		};
-		74B0660C2AA949C500B7F5B7 /* cgolTests */ = {
+		74B0660C2AA949C500B7F5B7 /* kgolTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74B066242AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "cgolTests" */;
+			buildConfigurationList = 74B066242AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "kgolTests" */;
 			buildPhases = (
 				74B066092AA949C500B7F5B7 /* Sources */,
 				74B0660A2AA949C500B7F5B7 /* Frameworks */,
@@ -171,14 +171,14 @@
 			dependencies = (
 				74B0660F2AA949C500B7F5B7 /* PBXTargetDependency */,
 			);
-			name = cgolTests;
+			name = kgolTests;
 			productName = cgolTests;
-			productReference = 74B0660D2AA949C500B7F5B7 /* cgolTests.xctest */;
+			productReference = 74B0660D2AA949C500B7F5B7 /* kgolTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		74B066162AA949C600B7F5B7 /* cgolUITests */ = {
+		74B066162AA949C600B7F5B7 /* kgolUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74B066272AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "cgolUITests" */;
+			buildConfigurationList = 74B066272AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "kgolUITests" */;
 			buildPhases = (
 				74B066132AA949C600B7F5B7 /* Sources */,
 				74B066142AA949C600B7F5B7 /* Frameworks */,
@@ -189,9 +189,9 @@
 			dependencies = (
 				74B066192AA949C600B7F5B7 /* PBXTargetDependency */,
 			);
-			name = cgolUITests;
+			name = kgolUITests;
 			productName = cgolUITests;
-			productReference = 74B066172AA949C600B7F5B7 /* cgolUITests.xctest */;
+			productReference = 74B066172AA949C600B7F5B7 /* kgolUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74B065F02AA949C400B7F5B7 /* Build configuration list for PBXProject "cgol" */;
+			buildConfigurationList = 74B065F02AA949C400B7F5B7 /* Build configuration list for PBXProject "kgol" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -230,9 +230,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74B065F42AA949C400B7F5B7 /* cgol */,
-				74B0660C2AA949C500B7F5B7 /* cgolTests */,
-				74B066162AA949C600B7F5B7 /* cgolUITests */,
+				74B065F42AA949C400B7F5B7 /* kgol */,
+				74B0660C2AA949C500B7F5B7 /* kgolTests */,
+				74B066162AA949C600B7F5B7 /* kgolUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B066122AA949C500B7F5B7 /* cgolTests.swift in Sources */,
+				74B066122AA949C500B7F5B7 /* kgolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,8 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B0661C2AA949C600B7F5B7 /* cgolUITests.swift in Sources */,
-				74B0661E2AA949C600B7F5B7 /* cgolUITestsLaunchTests.swift in Sources */,
+				74B0661C2AA949C600B7F5B7 /* kgolUITests.swift in Sources */,
+				74B0661E2AA949C600B7F5B7 /* kgolUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,12 +300,12 @@
 /* Begin PBXTargetDependency section */
 		74B0660F2AA949C500B7F5B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74B065F42AA949C400B7F5B7 /* cgol */;
+			target = 74B065F42AA949C400B7F5B7 /* kgol */;
 			targetProxy = 74B0660E2AA949C500B7F5B7 /* PBXContainerItemProxy */;
 		};
 		74B066192AA949C600B7F5B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74B065F42AA949C400B7F5B7 /* cgol */;
+			target = 74B065F42AA949C400B7F5B7 /* kgol */;
 			targetProxy = 74B066182AA949C600B7F5B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -465,7 +465,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kane.cgol;
+				PRODUCT_BUNDLE_IDENTIFIER = kane.kgol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/ShaderTypes.h";
@@ -495,7 +495,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kane.cgol;
+				PRODUCT_BUNDLE_IDENTIFIER = kane.kgol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/ShaderTypes.h";
@@ -519,7 +519,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cgol.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cgol";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kgol.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kgol";
 			};
 			name = Debug;
 		};
@@ -538,7 +538,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cgol.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cgol";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kgol.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kgol";
 			};
 			name = Release;
 		};
@@ -579,7 +579,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74B065F02AA949C400B7F5B7 /* Build configuration list for PBXProject "cgol" */ = {
+		74B065F02AA949C400B7F5B7 /* Build configuration list for PBXProject "kgol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B0661F2AA949C600B7F5B7 /* Debug */,
@@ -588,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74B066212AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "cgol" */ = {
+		74B066212AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "kgol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B066222AA949C600B7F5B7 /* Debug */,
@@ -597,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74B066242AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "cgolTests" */ = {
+		74B066242AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "kgolTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B066252AA949C600B7F5B7 /* Debug */,
@@ -606,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74B066272AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "cgolUITests" */ = {
+		74B066272AA949C600B7F5B7 /* Build configuration list for PBXNativeTarget "kgolUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B066282AA949C600B7F5B7 /* Debug */,

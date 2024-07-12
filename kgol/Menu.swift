@@ -1,6 +1,6 @@
 //
 //  Menu.swift
-//  cgol
+//  kgol
 //
 //  Created by Kane Sweet on 5/21/24.
 //
@@ -42,7 +42,7 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-                .background(Color.white.opacity(0.7))
+                .background(Color.white.opacity(0.15))
                 .cornerRadius(15) // Add rounded corners
                 .shadow(radius: 10) // Optional: add a shadow for better visual separation
                 .padding() // Add padding around the VStack

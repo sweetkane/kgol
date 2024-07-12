@@ -1,13 +1,13 @@
 //
-//  cgolUITests.swift
-//  cgolUITests
+//  kgolUITests.swift
+//  kgolUITests
 //
 //  Created by Kane Sweet on 9/6/23.
 //
 
 import XCTest
 
-final class cgolUITests: XCTestCase {
+final class kgolUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -1,13 +1,13 @@
 //
-//  cgolUITestsLaunchTests.swift
-//  cgolUITests
+//  kgolUITestsLaunchTests.swift
+//  kgolUITests
 //
 //  Created by Kane Sweet on 9/6/23.
 //
 
 import XCTest
 
-final class cgolUITestsLaunchTests: XCTestCase {
+final class kgolUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

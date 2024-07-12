@@ -1,6 +1,6 @@
 //
 //  Renderer.swift
-//  cgol
+//  kgol
 //
 //  Created by Kane Sweet on 9/6/23.
 //
@@ -158,18 +158,9 @@ class Renderer: NSObject, MTKViewDelegate {
         /// Respond to drawable size or orientation changes here
     }
 
-
-
-    func randomColor() -> SIMD4<Float> {
-        return SIMD4<Float>(Float.random(in: 0...1),
-                            Float.random(in: 0...1),
-                            Float.random(in: 0...1),
-                            1.0)
-    }
-
     func startColorUpdateTimer() {
         // Update colors every second (or adjust the interval as needed)
-        timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { [weak self] _ in
             self?.needsUpdate = true
         }
     }
@@ -207,7 +198,7 @@ class Renderer: NSObject, MTKViewDelegate {
                 let x = Float(i) * squareWidth - 1
                 let y = Float(j) * squareHeight - 1
 
-                let color = board[i][j] ? randomColor() : deadColor
+                let color = getCellColor(row: i, col: j)
 
                 let topLeft = Vertex(position: SIMD4<Float>(x, y + squareHeight, 0, 1), color: color)
                 let bottomLeft = Vertex(position: SIMD4<Float>(x, y, 0, 1), color: color)
@@ -224,15 +215,33 @@ class Renderer: NSObject, MTKViewDelegate {
                                          options: [])
     }
 
-    // CGOl logic
-    let gridWidth  = 40
-    let gridHeight = 40
+    func randomColor() -> SIMD4<Float> {
+        return SIMD4<Float>(Float.random(in: 0.8...1),
+                            Float.random(in: 0.3...1),
+                            Float.random(in: 0...0.5),
+                            1.0)
+    }
+
+    func weightedRandomColor(numLivingNbrs: Int) -> SIMD4<Float> {
+        let x = 0.015625 * pow(Float(numLivingNbrs), 2)
+
+        return SIMD4<Float>(Float.random(in: max(0, 1-x-0.3)...min(1, 1-x+0.3)),
+                            Float.random(in: max(0, x-0.3)...min(1, x+0.3)),
+                            Float.random(in: 0...1),
+                            1.0)
+    }
+
+    // KGOL logic
+    let gridWidth  = 64
+    let gridHeight = 64
+    let timerInterval = 0.5
+
     var board: [[Bool]] = []
 
     func initBoard() {
-        for i in 0..<gridHeight {
+        for _ in 0..<gridHeight {
             var row: [Bool] = []
-            for j in 0..<gridWidth {
+            for _ in 0..<gridWidth {
                 row += [Int.random(in: 0...1) == 0]
             }
             board += [row]
@@ -256,11 +265,7 @@ class Renderer: NSObject, MTKViewDelegate {
                 [1,-1], [1,0], [1,1]]
 
     func updateCell(row: Int, col: Int) -> Bool {
-        let numLivingNbrs = nbrs.compactMap { nbr in
-            let nbrRow = (row+nbr[0]) %% gridHeight
-            let nbrCol = (col+nbr[1]) %% gridWidth
-            return board[nbrRow][nbrCol] ? true : nil
-        }.count
+        let numLivingNbrs = numLivingNbrs(row: row, col: col)
 
         if board[row][col] {
             return shared.alpha <= numLivingNbrs && numLivingNbrs <= shared.beta
@@ -271,13 +276,21 @@ class Renderer: NSObject, MTKViewDelegate {
         }
     }
 
+    func numLivingNbrs(row: Int, col: Int) -> Int {
+        return nbrs.compactMap { nbr in
+            let nbrRow = (row+nbr[0]) %% gridHeight
+            let nbrCol = (col+nbr[1]) %% gridWidth
+            return board[nbrRow][nbrCol] ? true : nil
+        }.count
+    }
+
     func renderBoard() {
-        var color = randomColor()
+        var color: SIMD4<Float> = deadColor
         for i in 0..<vertices.count {
             if (i % 6 == 0) {
                 let row = (i / 6) % gridHeight
                 let col = (i / 6) / gridHeight
-                color = board[row][col] ? randomColor() : deadColor
+                color = getCellColor(row: row, col: col)
             }
             vertices[i].color = color
         }
@@ -286,12 +299,13 @@ class Renderer: NSObject, MTKViewDelegate {
                                            byteCount: vertices.count * MemoryLayout<Vertex>.stride)
     }
 
-    let aliveColor = SIMD4<Float>(Float(1),Float(1),Float(1),1.0)
-    let deadColor  = SIMD4<Float>(Float(0),Float(0),Float(0),1.0)
-
-    func neighbors(i: Int) {
-
+    func getCellColor(row: Int, col: Int) -> SIMD4<Float> {
+        let numLivingNbrs = numLivingNbrs(row: row, col: col)
+        return board[row][col] ? weightedRandomColor(numLivingNbrs: numLivingNbrs) : deadColor
     }
+
+    let aliveColor = SIMD4<Float>(Float(1),Float(1),Float(0.5),1.0)
+    let deadColor  = SIMD4<Float>(Float(0),Float(0),Float(0),1.0)
 }
 
 infix operator %%
