@@ -10,6 +10,10 @@ In Kane's game of life, we keep these rules, but we replace the numbers with var
 - If a cell is alive, and it has less than `alpha` or more than `beta` living neighbors, it dies
 - If a cell is dead, and it has exactly `chi` living neighbors, it comes to life
 - The user can adjust `alpha`, `beta`, and `chi` in real time to generate cool emergent patterns!
+- A couple more tweaks:
+  - If a cell is dead and has zero living neighbors, there's a small probability it comes to life
+    - This lets the user keep things going even if you accidentally kill all the cells
+  - Every cell gets a random color, whose temperature range is determined by how many living neighbors it has 
 
 ## Gallery
 ![ezgif-5-03c1abffae](https://github.com/user-attachments/assets/cb146ba7-894f-4cc0-a871-88ac6b421873)
