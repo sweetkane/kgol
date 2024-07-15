@@ -13,7 +13,7 @@ In Kane's game of life, we keep these rules, but we replace the numbers with var
 - A couple more tweaks:
   - If a cell is dead and has zero living neighbors, there's a small probability it comes to life
     - This lets the user keep things going even if you accidentally kill all the cells
-  - Every cell gets a random color, whose temperature range is determined by how many living neighbors it has 
+  - Every cell gets a semirandom color, partly determined by how many living neighbors it has 
 
 ## Gallery
 ![ezgif-5-03c1abffae](https://github.com/user-attachments/assets/cb146ba7-894f-4cc0-a871-88ac6b421873)
