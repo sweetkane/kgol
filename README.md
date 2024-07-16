@@ -12,7 +12,6 @@ In Kane's game of life, we keep these rules, but we replace the numbers with var
 - The user can adjust `alpha`, `beta`, and `chi` in real time to generate cool emergent patterns!
 - A couple more tweaks:
   - If a cell is dead and has zero living neighbors, there's a small probability it comes to life
-    - This lets the user keep things going even if you accidentally kill all the cells
   - Every cell gets a semirandom color, partly determined by how many living neighbors it has 
 
 ## Gallery
