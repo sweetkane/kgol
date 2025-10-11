@@ -1,5 +1,10 @@
-# kgol - Kane's Game Of Life
+<img width="380"  alt="Screenshot 2025-10-10 at 10 18 00 PM" src="https://github.com/user-attachments/assets/b6ebea92-9c44-4bb3-9a28-fe89c4a9defd" />
+
+# kgol - Kane's Game Of Life 
+
+
 A colorful interactive twist on [Conway's Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) developed for Apple devices
+
 
 ## Rules
 Conway's Game Of Life is based on a couple simple rules:
